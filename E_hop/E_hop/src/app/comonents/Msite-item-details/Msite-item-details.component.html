@@ -1,0 +1,18 @@
+
+<<div class="product-window">
+  <div class="image-container">
+    <img [src]="image" alt="Product Image" />
+  </div>
+  <div class="product-details">
+    <h3 class="title">{{ title }}</h3>
+    <p>{{ description }}</p>
+    <p>Price: {{ price | currency }}</p>
+    <button  class="BTN_M">Buy Now</button>
+    <div *ngIf="authService.isLoggedIn() && this.seller === authService.currentUser.name" style="display: flex; justify-content: flex-end; align-items: center;">
+      <button class="btn btn-danger" (click)="delProduct()"  style="background-color: #8d004b; color: #FFFFFF;">Delete</button>
+      <button class="btn btn-secondary" [routerLink]="['/blog/detail/edit/' + itemID]"  style="background-color: #006c2f; color: #FFFFFF;">Edit</button>
+    </div>
+  </div>
+</div>
+
+

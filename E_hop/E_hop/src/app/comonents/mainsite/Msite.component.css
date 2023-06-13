@@ -1,0 +1,58 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+.main-page {
+
+
+  padding:  1rem;
+
+}
+
+.item-container {
+
+
+}
+
+.item {
+  margin :1rem;
+
+
+
+
+}
+
+.slim-select {
+  border: none;
+
+  width: 8rem;
+  padding: 4px;
+  height: 2rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+  font-size: 14px;
+  outline: none;
+  /* Add any other custom styles to achieve the desired slim design */
+}
+.slim-button {
+  border: none;
+  width: 8rem;
+  margin-left: 2rem;
+
+  height: 2rem;
+
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+  font-size: 14px;
+  outline: none;
+  /* Add any other custom styles to achieve the desired slim design */
+}

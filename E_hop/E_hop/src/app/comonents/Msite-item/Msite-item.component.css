@@ -1,0 +1,31 @@
+.card {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.5);
+  border: 3px solid #4646e0; /* Add the border */
+  border-radius: 10px; /* Optional: Add border radius */
+  color: black;
+}
+
+.aspect-ratio {
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.aspect-ratio img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (min-resolution: 2dppx) {
+  .card {
+    max-width: 100%; /* Adjust the width for 1 column layout */
+    height: 60rem;
+    font-size: 2rem;
+  }
+}

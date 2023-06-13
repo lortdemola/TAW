@@ -1,0 +1,33 @@
+<div class="container main-page">
+  <div class="row">
+    <select *ngIf="isLog == true" class="slim-select"  [(ngModel)]="selectedFilter">
+      <option value="order">Price Value</option>
+      <option value="myProduct">My offers</option>
+    </select>
+    <button class="slim-button" (click)="toggleSortOrder()">Toggle Sort Order</button>
+    <div *ngIf="selectedFilter === 'order'" class="row">
+    <div class="col-md-4" *ngFor="let item of items$ | filter:filterText | priceSort: sortDescending  | slice: offset: offset + pageSize">
+      <Msite-item class="item" [class.fade-in]="true" [item]="item" >
+      </Msite-item>
+    </div>
+    </div>
+    <div *ngIf="selectedFilter === 'myProduct'" class="row">
+      <div class="col-md-4" *ngFor="let item of items$| myItemsFilter:user | slice: offset: offset + pageSize">
+        <Msite-item class="item" [class.fade-in]="true" [item]="item" >
+        </Msite-item>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-4 mb-5">
+    <nav>
+      <ul class="pagination">
+        <li class="page-item" [class.disabled]="offset === 0">
+          <a class="page-link" href="#" (click)="previousPage()">Previous</a>
+        </li>
+        <li class="page-item" [class.disabled]="offset >= items$.length - pageSize">
+          <a class="page-link" href="#" (click)="nextPage()">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

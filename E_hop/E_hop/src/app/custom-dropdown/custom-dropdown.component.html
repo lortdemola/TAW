@@ -1,0 +1,6 @@
+<div class="dropdown">
+  <button class="dropdown-toggle" (click)="toggleDropdown()">Settings</button>
+  <div class="dropdown-menu" [ngClass]="{ 'show': isDropdownOpen }">
+    <ng-content></ng-content>
+  </div>
+</div>

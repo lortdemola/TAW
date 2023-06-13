@@ -1,0 +1,27 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color:navy;
+  color: aqua;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: navy;
+  padding: 10px;
+  width: max-content;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.dropdown-menu.show {
+  display: block;
+}

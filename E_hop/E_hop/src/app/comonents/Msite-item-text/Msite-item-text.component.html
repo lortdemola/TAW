@@ -1,0 +1,5 @@
+<div class="card-body">
+  <h5 class="card-title text">{{ text }}</h5>
+  <p class="card-text">Price: {{ Number(price) | currency }}</p>
+  <button class="btn btn-primary"  [style.color]="'black' | spin" [routerLink]="['/blog/detail/' + id]" ButtonHoverAnimation>{{buttonText}}</button>
+</div>

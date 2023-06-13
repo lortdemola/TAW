@@ -1,0 +1,52 @@
+<section class="signup container">
+  <h1 class="entry-title"><span>Edit Product</span></h1>
+  <hr>
+  <form class="form-horizontal" method="post" name="signup" id="signup">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Title<span class="text-danger">*</span></label>
+      <div class="col-md-5 col-sm-8">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="text" class="form-control" name="title" id="title"
+                 placeholder="Enter Title (5-25 char)" [(ngModel)]="credentials.title">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Image<span class="text-danger">*</span></label>
+      <div class="col-md-8 col-sm-9">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input type="text" class="form-control" name="image" id="image" placeholder="Image URL"
+                 [(ngModel)]="credentials.image">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Description<span class="text-danger">*</span></label>
+      <div class="col-md-5 col-sm-8">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="text" class="form-control" name="description" id="description"
+                 placeholder="Description" [(ngModel)]="credentials.description">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Price<span class="text-danger">*</span></label>
+      <div class="col-md-5 col-sm-8">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="number" step="0.01" class="form-control" name="price" id="price"
+                 placeholder="Price" [(ngModel)]="credentials.price">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-xs-offset-3 col-xs-10">
+        <button (click)="updateProduct()" name="Submit" type="submit" class="btn btn-primary">Update Product</button>
+      </div>
+    </div>
+  </form>
+</section>
